@@ -150,7 +150,7 @@ module.exports = (options) => {
     <script>
       import { onMount } from 'svelte';
       ${templateIf(type.indexOf('cordova') >= 0, () => `
-      import { Device }  from '${customBuild ? '../js/framework7-custom.js' : 'framework7/framework7-lite.esm.bundle.js'}';
+      import { Device }  from '${customBuild ? '../js/framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
       `)}
       ${templateIf(template === 'blank', () => `
       import {
@@ -158,7 +158,7 @@ module.exports = (options) => {
         f7ready,
         App,
         View,
-      } from 'framework7-svelte';
+      } from 'framework7-cn-svelte';
       `, () => `
       import {
         f7,
@@ -182,14 +182,14 @@ module.exports = (options) => {
         ListInput,
         ListButton,
         BlockFooter
-      } from 'framework7-svelte';
+      } from 'framework7-cn-svelte';
       `)}
       ${templateIf(type.indexOf('cordova') >= 0, () => `
       import cordovaApp from '../js/cordova-app';
       `)}
       import routes from '../js/routes';
 
-      // Framework7 Parameters
+      // Framework7Cn Parameters
       let f7params = {
         ${indent(8, appParameters(options)).trim()}
       };

@@ -12,7 +12,7 @@ const generateRoutes = require('./generate-routes');
 const generateWebpackConfig = require('./generate-webpack-config');
 const generateManifest = require('./generate-manifest');
 const generateServiceWorker = require('./generate-service-worker');
-const generateFramework7Custom = require('./generate-framework7-custom');
+const generateFramework7CnCustom = require('./generate-framework7-cn-custom');
 
 module.exports = (options, iconFile) => {
   const cwd = options.cwd || process.cwd();
@@ -80,15 +80,15 @@ module.exports = (options, iconFile) => {
 
   // Copy Custom Build
   if (customBuild) {
-    const customBuildAssets = generateFramework7Custom(options);
+    const customBuildAssets = generateFramework7CnCustom(options);
     toCopy.push(...[
       {
         content: customBuildAssets.styles,
-        to: path.resolve(cwd, srcFolder, 'css', 'framework7-custom.less'),
+        to: path.resolve(cwd, srcFolder, 'css', 'framework7-cn-custom.less'),
       },
       {
         content: customBuildAssets.scripts,
-        to: path.resolve(cwd, srcFolder, 'js', 'framework7-custom.js'),
+        to: path.resolve(cwd, srcFolder, 'js', 'framework7-cn-custom.js'),
       },
     ]);
   }

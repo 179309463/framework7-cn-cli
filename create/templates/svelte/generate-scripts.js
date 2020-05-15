@@ -13,18 +13,18 @@ module.exports = (options) => {
   let scripts = '';
 
   scripts += indent(0, `
-    // Import Framework7
-    import Framework7 from '${customBuild ? './framework7-custom.js' : 'framework7/framework7-lite.esm.bundle.js'}';
+    // Import Framework7Cn
+    import Framework7Cn from '${customBuild ? './framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
 
-    // Import Framework7-Svelte Plugin
-    import Framework7Svelte from 'framework7-svelte';
+    // Import Framework-CN-Svelte Plugin
+    import Framework7CnSvelte from 'framework7-cn-svelte';
 
     ${templateIf(bundler === 'webpack', () => `
-    // Import Framework7 Styles
+    // Import Framework7Cn Styles
     ${templateIf(customBuild, () => `
-    import '../css/framework7-custom.less';
+    import '../css/framework7-cn-custom.less';
     `, () => `
-    import 'framework7/css/framework7.bundle.css';
+    import 'framework7-cn/css/framework7.bundle.css';
     `)}
 
     // Import Icons and App Custom Styles
@@ -38,7 +38,7 @@ module.exports = (options) => {
     import App from '../components/app.svelte';
 
     // Init F7 Svelte Plugin
-    Framework7.use(Framework7Svelte)
+    Framework7Cn.use(Framework7CnSvelte)
 
     // Mount Svelte App
     const app = new App({

@@ -9,7 +9,7 @@ module.exports = (options) => {
   let description = '';
   if (template === 'single-view' || template === 'blank') {
     description = `
-          <p>Here is your blank Framework7 app. Let's see what we have here.</p>
+          <p>Here is your blank Framework7Cn app. Let's see what we have here.</p>
     `;
   }
   if (template === 'split-view') {

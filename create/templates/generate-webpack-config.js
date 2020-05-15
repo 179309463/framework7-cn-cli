@@ -118,15 +118,15 @@ module.exports = (options) => {
             use: 'babel-loader',
             include: [
               resolvePath('src'),
-              resolvePath('node_modules/framework7'),
+              resolvePath('node_modules/framework7-cn'),
               ${templateIf(framework === 'vue', () => `
-              resolvePath('node_modules/framework7-vue'),
+              resolvePath('node_modules/framework7-cn-vue'),
               `)}
               ${templateIf(framework === 'react', () => `
-              resolvePath('node_modules/framework7-react'),
+              resolvePath('node_modules/framework7-cn-react'),
               `)}
               ${templateIf(framework === 'svelte', () => `
-              resolvePath('node_modules/framework7-svelte'),
+              resolvePath('node_modules/framework7-cn-svelte'),
               resolvePath('node_modules/svelte'),
               `)}
               resolvePath('node_modules/template7'),

@@ -10,7 +10,7 @@
   </List>
 </Page>
 <script>
-  import { f7ready, f7, Page, Navbar, List, ListItem } from 'framework7-svelte';
+  import { f7ready, f7, Page, Navbar, List, ListItem } from 'framework7-cn-svelte';
 
   let products = [];
 

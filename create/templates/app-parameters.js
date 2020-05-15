@@ -13,7 +13,7 @@ module.exports = (options) => {
 
   const hasCordova = type.indexOf('cordova') >= 0;
 
-  const deviceVar = framework === 'core' ? 'Framework7.device' : 'Device';
+  const deviceVar = framework === 'core' ? 'Framework7Cn.device' : 'Device';
 
   const needData = template !== 'blank' && ((template === 'tabs' && framework !== 'core') || !bundler);
   const needProducts = template === 'tabs' && (framework !== 'core' || !bundler);

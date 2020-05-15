@@ -12,5 +12,5 @@
   </Block>
 </Page>
 <script>
-  import { Page, Navbar, Block, BlockTitle } from 'framework7-svelte';
+  import { Page, Navbar, Block, BlockTitle } from 'framework7-cn-svelte';
 </script>

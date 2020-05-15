@@ -11,7 +11,7 @@ import {
   Button,
   Range,
   Block
-} from 'framework7-react';
+} from 'framework7-cn-react';
 
 export default () => (
   <Page name="form">

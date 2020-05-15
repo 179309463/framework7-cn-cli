@@ -129,7 +129,7 @@
   </f7-page>
 </template>
 <script>
-  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7BlockFooter, f7Block, f7List, f7ListInput, f7ListItem, f7Button, f7Popup, f7Icon } from 'framework7-vue';
+  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7BlockFooter, f7Block, f7List, f7ListInput, f7ListItem, f7Button, f7Popup, f7Icon } from 'framework7-cn-vue';
   import logText from '../utils/log-text';
   import getLog from '../utils/get-log';
 

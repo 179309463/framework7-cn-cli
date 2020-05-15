@@ -18,7 +18,7 @@ module.exports = (options) => {
         return word[0].toUpperCase() + word.substring(1);
       })
       .join('');
-    return `import ${name} from 'framework7/components/${c}/${c}.js';`;
+    return `import ${name} from 'framework7-cn/components/${c}/${c}.js';`;
   });
   const componentsNamesJS = components.map((c) => {
     return c
@@ -30,23 +30,23 @@ module.exports = (options) => {
   });
 
   const scripts = indent(0, `
-    import Framework7, { Device, Request, Utils } from '${framework === 'core' ? 'framework7' : 'framework7/framework7-lite.esm.js'}';
+    import Framework7Cn, { Device, Request, Utils } from '${framework === 'core' ? 'framework7-cn' : 'framework7-cn/framework7-lite.esm.js'}';
     ${componentsImportsJS.join('\n    ')}
 
-    Framework7.use([
+    Framework7Cn.use([
       ${componentsNamesJS.join(',\n      ')}
     ]);
 
-    export default Framework7;
+    export default Framework7Cn;
     export { Device, Request, Utils };
   `);
 
   const componentsImportsLESS = components.map((c) => {
-    return `@import url('../../node_modules/framework7/components/${c}/${c}.less');`;
+    return `@import url('../../node_modules/framework7-cn/components/${c}/${c}.less');`;
   });
   const styles = indent(0, `
     & {
-      @import url('../../node_modules/framework7/framework7.less');
+      @import url('../../node_modules/framework7-cn/framework7.less');
       ${componentsImportsLESS.join('\n      ')}
 
       @includeIosTheme: ${themes.indexOf('ios') >= 0};

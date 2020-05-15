@@ -42,9 +42,9 @@ module.exports = (options) => {
     }
   } else {
     folders.push(...[
-      './www/framework7',
-      './www/framework7/js',
-      './www/framework7/css',
+      './www/framework7-cn',
+      './www/framework7-cn/js',
+      './www/framework7-cn/css',
     ]);
   }
   if (type.indexOf('web') >= 0 || type.indexOf('pwa') >= 0) {

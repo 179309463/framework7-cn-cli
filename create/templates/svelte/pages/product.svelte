@@ -6,7 +6,7 @@
   </Block>
 </Page>
 <script>
-  import { f7, Page, Navbar, BlockTitle, Block } from 'framework7-svelte';
+  import { f7, Page, Navbar, BlockTitle, Block } from 'framework7-cn-svelte';
 
   export let f7route;
 

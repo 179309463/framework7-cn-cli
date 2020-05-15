@@ -141,7 +141,7 @@ module.exports = (startPage = '/', port = 3001) => {
   });
 
   app.listen(port, () => {
-    console.log(`${chalk.bold(`\nFramework7 CLI UI is running on http://localhost:${port}`)} ${chalk.gray('(CTRL + C to exit)')}`);
+    console.log(`${chalk.bold(`\nFramework7 CN CLI UI is running on http://localhost:${port}`)} ${chalk.gray('(CTRL + C to exit)')}`);
   });
 
   opn(`http://localhost:${port}${startPage}`);

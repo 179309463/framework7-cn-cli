@@ -14,9 +14,9 @@ module.exports = (options) => {
 
 # ${name}
 
-## Framework7 CLI Options
+## Framework7 CN CLI Options
 
-Framework7 app created with following options:
+Framework7Cn app created with following options:
 
 \`\`\`
 ${JSON.stringify(options, null, 2)}
@@ -60,33 +60,33 @@ There is also cordova Electron platform installed. To learn more about it and El
 Assets (icons, splash screens) source images located in \`assets-src\` folder. To generate your own icons and splash screen images, you will need to replace all assets in this directory with your own images (pay attention to image size and format), and run the following command in the project directory:
 
 \`\`\`
-framework7 assets
+framework7-cn assets
 \`\`\`
 
 Or launch UI where you will be able to change icons and splash screens:
 
 \`\`\`
-framework7 assets --ui
+framework7-cn assets --ui
 \`\`\`
 
 ## Documentation & Resources
 
-* [Framework7 Core Documentation](https://framework7.io/docs/)
+* [Framework7Cn Core Documentation](https://framework7.io/docs/)
 ${templateIf(framework === 'vue', () => `
-* [Framework7 Vue Documentation](https://framework7.io/vue/)
+* [Framework7CnVue Documentation](https://framework7.io/vue/)
 `)}
 ${templateIf(framework === 'react', () => `
-* [Framework7 React Documentation](https://framework7.io/react/)
+* [Framework7CnReact Documentation](https://framework7.io/react/)
 `)}
 ${templateIf(framework === 'svelte', () => `
-* [Framework7 Svelte Documentation](https://framework7.io/svelte/)
+* [Framework7CnSvelte Documentation](https://framework7.io/svelte/)
 `)}
 * [Framework7 Icons Reference](https://framework7.io/icons/)
 * [Community Forum](https://forum.framework7.io)
 
-## Support Framework7
+## Support Framework7CN
 
-Love Framework7? Support project by donating or pledging on patreon:
+Love Framework7Cn? Support project by donating or pledging on patreon:
 https://patreon.com/vladimirkharlampidi
 
   `.trim().replace(/[\n]{3,}/, '\n');

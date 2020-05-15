@@ -171,5 +171,5 @@
     Button,
     Range,
     Block
-  } from 'framework7-svelte';
+  } from 'framework7-cn-svelte';
 </script>

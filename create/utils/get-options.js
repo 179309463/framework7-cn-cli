@@ -46,7 +46,7 @@ const questions = [
     type: 'input',
     name: 'pkg',
     message: 'App package (Bundle ID):',
-    default: 'io.framework7.myapp',
+    default: 'io.framework7cn.myapp',
     when: (opts) => opts.type.indexOf('cordova') >= 0,
     validate(input) {
       return new Promise((resolve, reject) => {
@@ -97,19 +97,19 @@ const questions = [
     message: 'What type of framework do you prefer?',
     choices: [
       {
-        name: 'Framework7 Core',
+        name: 'Framework7Cn Core',
         value: 'core',
       },
       {
-        name: 'Framework7 with Vue.js',
+        name: 'Framework7Cn with Vue.js',
         value: 'vue',
       },
       {
-        name: 'Framework7 with React',
+        name: 'Framework7Cn with React',
         value: 'react',
       },
       {
-        name: 'Framework7 with Svelte',
+        name: 'Framework7Cn with Svelte',
         value: 'svelte',
       },
     ],

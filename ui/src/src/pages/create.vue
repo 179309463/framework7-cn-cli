@@ -25,7 +25,7 @@
           <span>General</span>
         </f7-block-title>
         <f7-block-title medium>Destination</f7-block-title>
-        <f7-block-header>New Framework7 app will be created in the following directory.</f7-block-header>
+        <f7-block-header>New Framework7Cn app will be created in the following directory.</f7-block-header>
         <f7-list no-hairlines-between class="inputs-list">
           <f7-list-input
             type="text"
@@ -259,28 +259,28 @@
             <div class="col-icon" @click="framework = 'core'">
               <img src="../assets/logo.svg">
             </div>
-            <div class="col-label">Framework7 Core</div>
+            <div class="col-label">Framework7Cn Core</div>
           </div>
           <div class="col-25 checkbox-col" :class="{checked: framework === 'vue'}">
             <div class="col-icon" @click="framework = 'vue'; bundler = 'webpack'">
               <img src="../assets/logo.svg">
               <img src="../assets/vuejs-logo.svg">
             </div>
-            <div class="col-label">Framework7 with Vue.js</div>
+            <div class="col-label">Framework7Cn with Vue.js</div>
           </div>
           <div class="col-25 checkbox-col" :class="{checked: framework === 'react'}">
             <div class="col-icon" @click="framework = 'react'; bundler = 'webpack'">
               <img src="../assets/logo.svg">
               <img src="../assets/react-logo.svg">
             </div>
-            <div class="col-label">Framework7 with React</div>
+            <div class="col-label">Framework7Cn with React</div>
           </div>
           <div class="col-25 checkbox-col" :class="{checked: framework === 'svelte'}">
             <div class="col-icon" @click="framework = 'svelte'; bundler = 'webpack'">
               <img src="../assets/logo.svg">
               <img src="../assets/svelte-logo.svg">
             </div>
-            <div class="col-label">Framework7 with Svelte</div>
+            <div class="col-label">Framework7Cn with Svelte</div>
           </div>
         </div>
       </f7-block>
@@ -498,11 +498,11 @@
         </f7-list>
       </f7-block>
 
-      <!-- Framework7 CUSTOM BUILD -->
+      <!-- Framework7Cn CUSTOM BUILD -->
       <f7-block medium-inset strong class="content-block">
         <f7-block-title large>
           <i class="f7-icons block-icon">square_grid_2x2_fill</i>
-          <span>Framework7 Custom Build</span>
+          <span>Framework7Cn Custom Build</span>
           <div class="right">
             <span class="toggle-label disabled">Enable</span>
             <f7-toggle :checked="customBuild" @change="customBuild = $event.target.checked" color="green" />
@@ -641,7 +641,7 @@
   </f7-page>
 </template>
 <script>
-  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7BlockFooter, f7Block, f7List, f7ListInput, f7ListItem, f7Button, f7Toggle, f7Checkbox, f7Radio, f7Popup, f7Link } from 'framework7-vue';
+  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7BlockFooter, f7Block, f7List, f7ListInput, f7ListItem, f7Button, f7Toggle, f7Checkbox, f7Radio, f7Popup, f7Link } from 'framework7-cn-vue';
   import logText from '../utils/log-text';
   import getLog from '../utils/get-log';
   import componentsList from '../utils/components-list';
@@ -681,7 +681,7 @@
         cwd: '',
         name: 'My App',
         type: [],
-        pkg: 'io.framework7.myapp',
+        pkg: 'io.framework7cn.myapp',
         cordova: {
           folder: 'cordova',
           platforms: ['ios', 'android'],
@@ -859,7 +859,7 @@
         const data = [JSON.stringify(options, '', 2)];
 
         let file;
-        const fileName = `${options.name || 'framework7'}.json`;
+        const fileName = `${options.name || 'framework7-cn'}.json`;
         const properties = { type: 'application/json' };
         try {
           file = new File(data, fileName, properties);
@@ -918,7 +918,7 @@
         const reader = new FileReader();
         reader.onload = () => {
           const content = JSON.parse(reader.result);
-          self.importSettings(content.framework7 || content);
+          self.importSettings(content.framework7cn || content);
         }
         reader.readAsText(e.target.files[0]);
       },

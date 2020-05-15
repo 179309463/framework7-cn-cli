@@ -17,18 +17,18 @@ module.exports = (options) => {
     import React from 'react';
     import ReactDOM from 'react-dom';
 
-    // Import Framework7
-    import Framework7 from '${customBuild ? './framework7-custom.js' : 'framework7/framework7-lite.esm.bundle.js'}';
+    // Import Framework7Cn
+    import Framework7Cn from '${customBuild ? './framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
 
-    // Import Framework7-React Plugin
-    import Framework7React from 'framework7-react';
+    // Import Framework-CN-React Plugin
+    import Framework7CnReact from 'framework7-cn-react';
 
     ${templateIf(bundler === 'webpack', () => `
-    // Import Framework7 Styles
+    // Import Framework7Cn Styles
     ${templateIf(customBuild, () => `
-    import '../css/framework7-custom.less';
+    import '../css/framework7-cn-custom.less';
     `, () => `
-    import 'framework7/css/framework7.bundle.css';
+    import 'framework7-cn/css/framework7.bundle.css';
     `)}
 
     // Import Icons and App Custom Styles
@@ -42,7 +42,7 @@ module.exports = (options) => {
     import App from '../components/app.jsx';
 
     // Init F7 React Plugin
-    Framework7.use(Framework7React)
+    Framework7Cn.use(Framework7CnReact)
 
     // Mount React App
     ReactDOM.render(

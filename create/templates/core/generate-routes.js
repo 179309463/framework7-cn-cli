@@ -111,14 +111,14 @@ module.exports = (options) => {
               var user = {
                 firstName: 'Vladimir',
                 lastName: 'Kharlampidi',
-                about: 'Hello, i am creator of Framework7! Hope you like it!',
+                about: 'Hello, i am creator of Framework7Cn! Hope you like it!',
                 links: [
                   {
-                    title: 'Framework7 Website',
+                    title: 'Framework7Cn Website',
                     url: 'http://framework7.io',
                   },
                   {
-                    title: 'Framework7 Forum',
+                    title: 'Framework7Cn Forum',
                     url: 'http://forum.framework7.io',
                   },
                 ]
@@ -210,14 +210,14 @@ module.exports = (options) => {
               var user = {
                 firstName: 'Vladimir',
                 lastName: 'Kharlampidi',
-                about: 'Hello, i am creator of Framework7! Hope you like it!',
+                about: 'Hello, i am creator of Framework7Cn! Hope you like it!',
                 links: [
                   {
-                    title: 'Framework7 Website',
+                    title: 'Framework7Cn Website',
                     url: 'http://framework7.io',
                   },
                   {
-                    title: 'Framework7 Forum',
+                    title: 'Framework7Cn Forum',
                     url: 'http://forum.framework7.io',
                   },
                 ]

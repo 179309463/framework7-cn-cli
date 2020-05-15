@@ -7,24 +7,24 @@ module.exports = function generatePackageJson(options) {
 
   // Dependencies
   const dependencies = [
-    'framework7',
+    'framework7-cn',
     'dom7',
     'template7',
     ...(theming.iconFonts ? [
       'framework7-icons',
     ] : []),
     ...(framework === 'vue' ? [
-      'framework7-vue',
+      'framework7-cn-vue',
       'vue',
     ] : []),
     ...(framework === 'react' ? [
-      'framework7-react',
+      'framework7-cn-react',
       'react',
       'react-dom',
       'prop-types',
     ] : []),
     ...(framework === 'svelte' ? [
-      'framework7-svelte',
+      'framework7-cn-svelte',
       'svelte',
     ] : []),
   ];

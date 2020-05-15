@@ -42,7 +42,7 @@ module.exports = async (options = {}, logger, { exitOnError = true, iconFile = n
 
   // Write Package.json and project json
   fse.writeFileSync(path.join(cwd, 'package.json'), packageJson.content);
-  fse.writeFileSync(path.join(cwd, 'framework7.json'), JSON.stringify(options, '', 2));
+  fse.writeFileSync(path.join(cwd, 'framework7-cn.json'), JSON.stringify(options, '', 2));
 
   logger.statusDone('Generating package.json');
 
@@ -178,7 +178,7 @@ ${chalk.bold(logSymbols.info)} ${chalk.bold('Next steps:')}
   - 📖 Visit documentation at ${chalk.bold('https://framework7.io/docs/')}
   - 📖 Check ${chalk.bold('README.md')} in project root folder with further instructions
 
-${chalk.bold('Love Framework7? Support project by donating or pledging on patreon:')}
+${chalk.bold('Love Framework7Cn? Support project by donating or pledging on patreon:')}
 ${chalk.bold('https://patreon.com/vladimirkharlampidi')}
     `;
 

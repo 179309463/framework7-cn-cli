@@ -15,7 +15,7 @@
   </List>
 </Page>
 <script>
-  import { Page, Navbar, Block, List, ListItem } from 'framework7-svelte';
+  import { Page, Navbar, Block, List, ListItem } from 'framework7-cn-svelte';
 
   export let f7route;
 

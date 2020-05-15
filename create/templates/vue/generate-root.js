@@ -152,7 +152,7 @@ module.exports = (options) => {
     </template>
     <script>
       ${templateIf(type.indexOf('cordova') >= 0, () => `
-      import { Device }  from '${customBuild ? '../js/framework7-custom.js' : 'framework7/framework7-lite.esm.bundle.js'}';
+      import { Device }  from '${customBuild ? '../js/framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
       import cordovaApp from '../js/cordova-app.js';
       `)}
       import routes from '../js/routes.js';
@@ -160,7 +160,7 @@ module.exports = (options) => {
       export default {
         data() {
           return {
-            // Framework7 Parameters
+            // Framework7Cn Parameters
             f7params: {
               ${indent(14, appParameters(options)).trim()}
             },

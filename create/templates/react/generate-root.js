@@ -92,13 +92,13 @@ module.exports = (options) => {
   return indent(0, `
     import React from 'react';
     ${templateIf(type.indexOf('cordova') >= 0, () => `
-    import { Device }  from '${customBuild ? '../js/framework7-custom.js' : 'framework7/framework7-lite.esm.bundle.js'}';
+    import { Device }  from '${customBuild ? '../js/framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
     `)}
     ${template === 'blank' ? `
     import {
       App,
       View,
-    } from 'framework7-react';
+    } from 'framework7-cn-react';
     `.trim() : `
     import {
       App,
@@ -120,7 +120,7 @@ module.exports = (options) => {
       ListInput,
       ListButton,
       BlockFooter
-    } from 'framework7-react';
+    } from 'framework7-cn-react';
     `.trim()}
     ${templateIf(type.indexOf('cordova') >= 0, () => `
     import cordovaApp from '../js/cordova-app';
@@ -132,7 +132,7 @@ module.exports = (options) => {
         super();
 
         this.state = {
-          // Framework7 Parameters
+          // Framework7Cn Parameters
           f7params: {
             ${indent(12, appParameters(options)).trim()}
           },

@@ -30,10 +30,10 @@ program
   .version(pkg.version)
   .usage('<command> [options]')
   .command('create')
-  .option('--skipUpdate', 'Skip checking for update of framework7-cli')
+  .option('--skipUpdate', 'Skip checking for update of framework7-cn-cli')
   .option('--ui', 'Launch new app creation UI')
   .option('-P, --port <n>', 'Specify UI server port. By default it is 3001', parseInt)
-  .description('Create a new Framework7 project')
+  .description('Create a new Framework7Cn project')
   .action(async (options) => {
     // Check update
     if (options.skipUpdate === undefined) {
@@ -43,14 +43,14 @@ program
     const currentProject = getCurrentProject(cwd);
 
     if (currentProject) {
-      log.text(`${logSymbols.error} Framework7 project already set up in current directory`);
+      log.text(`${logSymbols.error} Framework7Cn project already set up in current directory`);
       process.exit(1);
     }
 
     if (options.ui) {
-      spinner.start('Launching Framework7 UI server');
+      spinner.start('Launching Framework7Cn UI server');
       server('/create/', options.port);
-      spinner.end('Launching Framework7 UI server');
+      spinner.end('Launching Framework7Cn UI server');
     } else {
       const opts = await getOptions();
       await createApp(
@@ -67,10 +67,10 @@ program
 program
   .command('assets')
   .alias('generate-assets')
-  .option('--skipUpdate', 'Skip checking for update of framework7-cli')
+  .option('--skipUpdate', 'Skip checking for update of framework7-cn-cli')
   .option('--ui', 'Launch assets generation UI')
   .option('-P, --port <n>', 'Specify UI server port. By default it is 3001', parseInt)
-  .description('Generate Framework7 app icons and splash screens')
+  .description('Generate Framework7Cn app icons and splash screens')
   .action(async (options) => {
     // Check update
     if (options.skipUpdate === undefined) {
@@ -79,14 +79,14 @@ program
 
     const currentProject = getCurrentProject(cwd);
     if (!currentProject) {
-      log.text(`${logSymbols.error} Framework7 project not found in current directory`);
+      log.text(`${logSymbols.error} Framework7Cn project not found in current directory`);
       process.exit(1);
     }
 
     if (options.ui) {
-      spinner.start('Launching Framework7 UI server');
+      spinner.start('Launching Framework7Cn UI server');
       server('/assets/', options.port);
-      spinner.end('Launching Framework7 UI server');
+      spinner.end('Launching Framework7Cn UI server');
     } else {
       await generateAssets({}, currentProject, logger);
       process.exit(0);

@@ -74,16 +74,16 @@ module.exports = (options) => {
   } else {
     // Copy F7
     toCopy.push(...[]);
-    fse.readdirSync(path.resolve(cwd, 'node_modules', 'framework7', 'js')).forEach((f) => {
+    fse.readdirSync(path.resolve(cwd, 'node_modules', 'framework7-cn', 'js')).forEach((f) => {
       toCopy.push({
-        from: path.resolve(cwd, 'node_modules', 'framework7', 'js', f),
-        to: path.resolve(cwd, srcFolder, 'framework7', 'js', f),
+        from: path.resolve(cwd, 'node_modules', 'framework7-cn', 'js', f),
+        to: path.resolve(cwd, srcFolder, 'framework7-cn', 'js', f),
       });
     });
-    fse.readdirSync(path.resolve(cwd, 'node_modules', 'framework7', 'css')).forEach((f) => {
+    fse.readdirSync(path.resolve(cwd, 'node_modules', 'framework7-cn', 'css')).forEach((f) => {
       toCopy.push({
-        from: path.resolve(cwd, 'node_modules', 'framework7', 'css', f),
-        to: path.resolve(cwd, srcFolder, 'framework7', 'css', f),
+        from: path.resolve(cwd, 'node_modules', 'framework7-cn', 'css', f),
+        to: path.resolve(cwd, srcFolder, 'framework7-cn', 'css', f),
       });
     });
     if (type.indexOf('cordova') >= 0) {

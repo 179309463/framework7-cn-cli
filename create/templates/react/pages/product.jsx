@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Navbar, BlockTitle, Block } from 'framework7-react';
+import { Page, Navbar, BlockTitle, Block } from 'framework7-cn-react';
 
 export default class extends React.Component {
   constructor(props) {

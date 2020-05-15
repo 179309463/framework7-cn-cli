@@ -4,8 +4,8 @@
   </f7-app>
 </template>
 <script>
-  import { Utils } from 'framework7';
-  import { f7App, f7View } from 'framework7-vue';
+  import { Utils } from 'framework7-cn';
+  import { f7App, f7View } from 'framework7-cn-vue';
   import routes from '../js/routes.js';
 
   export default {
@@ -15,7 +15,7 @@
     data() {
       return {
         f7params: {
-          name: 'Framework7 CLI',
+          name: 'Framework7 CN CLI',
           theme: 'ios',
           iosTranslucentBars: false,
           routes: routes,

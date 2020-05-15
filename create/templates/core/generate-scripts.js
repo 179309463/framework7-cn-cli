@@ -14,17 +14,17 @@ module.exports = (options) => {
     scripts += indent(0, `
       import $$ from 'dom7';
       ${templateIf(customBuild, () => `
-      import Framework7 from './framework7-custom.js';
+      import Framework7Cn from './framework7-cn-custom.js';
       `, () => `
-      import Framework7 from 'framework7/framework7.esm.bundle.js';
+      import Framework7Cn from 'framework7-cn/framework7.esm.bundle.js';
       `)}
 
       ${templateIf(bundler === 'webpack', () => `
       // Import F7 Styles
       ${templateIf(customBuild, () => `
-      import '../css/framework7-custom.less';
+      import '../css/framework7-cn-custom.less';
       `, () => `
-      import 'framework7/css/framework7.bundle.css';
+      import 'framework7-cn/css/framework7.bundle.css';
       `)}
 
       // Import Icons and App Custom Styles
@@ -50,7 +50,7 @@ module.exports = (options) => {
   }
 
   scripts += indent(0, `
-    var app = new Framework7({
+    var app = new Framework7Cn({
       ${indent(6, appParameters(options)).trim()}
     });
     ${templateIf(!bundler && template !== 'blank', () => `

@@ -27,7 +27,7 @@
   </Block>
 </Page>
 <script>
-  import { Page, Navbar, Block, Link } from 'framework7-svelte';
+  import { Page, Navbar, Block, Link } from 'framework7-cn-svelte';
 
   export let f7route;
   export let f7router;

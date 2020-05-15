@@ -3,11 +3,11 @@
     <f7-navbar :sliding="false" large large-transparent>
       <f7-nav-title>
         <i class="f7-navbar-logo"></i>
-        <span>Framework7 CLI</span>
+        <span>Framework7 CN CLI</span>
       </f7-nav-title>
       <f7-nav-title-large>
         <i class="f7-navbar-logo"></i>
-        <span>Framework7 CLI</span>
+        <span>Framework7 CN CLI</span>
       </f7-nav-title-large>
     </f7-navbar>
 
@@ -31,7 +31,7 @@
   </f7-page>
 </template>
 <script>
-  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7Block, f7List, f7ListInput, f7ListItem, f7Button } from 'framework7-vue';
+  import { f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7Block, f7List, f7ListInput, f7ListItem, f7Button } from 'framework7-cn-vue';
   export default {
     components: {
       f7Page, f7Navbar, f7NavTitle, f7NavTitleLarge, f7BlockTitle, f7BlockHeader, f7Block, f7List, f7ListInput, f7ListItem, f7Button,
