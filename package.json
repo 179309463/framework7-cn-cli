@@ -1,6 +1,6 @@
 {
   "name": "framework7-cn-cli",
-  "version": "3.3.3",
+  "version": "3.3.4beta",
   "description": "Framework7Cn command line utility (CLI)",
   "main": "index.js",
   "bin": {
