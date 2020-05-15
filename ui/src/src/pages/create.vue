@@ -178,6 +178,7 @@
           <f7-list media-list no-hairlines-between>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-statusbar') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-statusbar')"
               title="cordova-plugin-statusbar"
@@ -185,6 +186,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-keyboard') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-keyboard')"
               title="cordova-plugin-keyboard"
@@ -192,6 +194,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-splashscreen') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-splashscreen')"
               title="cordova-plugin-splashscreen"
@@ -199,6 +202,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-wkwebview-engine') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-wkwebview-engine')"
               title="cordova-plugin-wkwebview-engine"
@@ -207,6 +211,7 @@
 
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-device') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-device')"
               title="cordova-plugin-device"
@@ -214,6 +219,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-inappbrowser') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-inappbrowser')"
               title="cordova-plugin-inappbrowser"
@@ -221,6 +227,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-file') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-file')"
               title="cordova-plugin-file"
@@ -228,6 +235,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-media') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-media')"
               title="cordova-plugin-media"
@@ -235,6 +243,7 @@
             />
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               :checked="cordova.plugins.indexOf('cordova-plugin-safariviewcontroller') >= 0"
               @change="toggleArrayValue(cordova.plugins, 'cordova-plugin-safariviewcontroller')"
               title="cordova-plugin-safariviewcontroller"
@@ -392,12 +401,14 @@
           <f7-list no-hairlines-between media-list>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               title="Development source map"
               text="In dev mode it generates cheap (eval) source map. Disable for even faster dev builds"           @change="webpack.developmentSourceMap = $event.target.checked"
               :checked="webpack.developmentSourceMap === true"
             ></f7-list-item>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               title="Production source map"
               text="Disable for faster production builds, but without source maps"
               @change="webpack.productionSourceMap = $event.target.checked"
@@ -405,6 +416,7 @@
             ></f7-list-item>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               title="Inline small assets"
               text="When enabled, it will load small assets (less than 10Kb) and insert inline as base64 URIs"
               @change="webpack.inlineAssets = $event.target.checked"
@@ -412,6 +424,7 @@
             ></f7-list-item>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               title="Hash assets and bundle"
               text="When enabled, it will add MD5 hash of the file content to generated bundle and to assets, to something like app.b34c1df56.js. Such file naming can force browser to clear its cache"
               @change="webpack.hashAssets = $event.target.checked"
@@ -419,6 +432,7 @@
             ></f7-list-item>
             <f7-list-item
               checkbox
+              checkbox-icon="start"
               title="Preserve assets path"
               text="By default, webpack will move all assets to folders based on asset type (images to /images/ folder, videos and audio to /media/ folder, etc). If this option enabled, it will preserve assets path and keep files and folder structure"
               @change="webpack.preserveAssetsPaths = $event.target.checked"
@@ -440,6 +454,7 @@
             title="Include Framework7 Icons and Material Icons icon fonts"
             text="Disable if you want to use own custom icons"
             checkbox
+            checkbox-icon="start"
             :checked="theming.iconFonts === true"
             @change="theming.iconFonts = $event.target.checked"
           />
@@ -447,6 +462,7 @@
             title="Custom color theme"
             text="Enable to specify custom color theme"
             checkbox
+            checkbox-icon="start"
             :checked="theming.customColor === true"
             @change="theming.customColor = $event.target.checked"
           />
@@ -485,6 +501,7 @@
             title="Dark theme"
             text="Enables dark theme by default"
             checkbox
+            checkbox-icon="start"
             :checked="theming.darkTheme === true"
             @change="theming.darkTheme = $event.target.checked"
           />
@@ -492,6 +509,7 @@
             title="Fill style navigation bars"
             text="Enables navigation bars to be fill with color"
             checkbox
+            checkbox-icon="start"
             :checked="theming.fillBars === true"
             @change="theming.fillBars = $event.target.checked"
           />
@@ -522,6 +540,7 @@
                   v-if="index < 7"
                   checked
                   checkbox
+                  checkbox-icon="start"
                   disabled
                   :title="coreComponent"
                 />
@@ -536,6 +555,7 @@
                   v-if="index >= 7"
                   checked
                   checkbox
+                  checkbox-icon="start"
                   disabled
                   :title="coreComponent"
                 />
@@ -555,6 +575,7 @@
                   :checked="customBuildConfig.components.indexOf(component.component) >= 0"
                   @change="toggleArrayValue(customBuildConfig.components, component.component)"
                   checkbox
+                  checkbox-icon="start"
                   :title="component.name"
                 />
               </f7-list>
@@ -568,6 +589,7 @@
                   :checked="customBuildConfig.components.indexOf(component.component) >= 0"
                   @change="toggleArrayValue(customBuildConfig.components, component.component)"
                   checkbox
+                  checkbox-icon="start"
                   :title="component.name"
                 />
               </f7-list>
@@ -581,6 +603,7 @@
                   :checked="customBuildConfig.components.indexOf(component.component) >= 0"
                   @change="toggleArrayValue(customBuildConfig.components, component.component)"
                   checkbox
+                  checkbox-icon="start"
                   :title="component.name"
                 />
               </f7-list>
@@ -592,36 +615,42 @@
               :checked="customBuildConfig.themes.indexOf('ios') >= 0"
               @change="toggleArrayValue(customBuildConfig.themes, 'ios')"
               checkbox
+              checkbox-icon="start"
               title="Include iOS theme"
             />
             <f7-list-item
               :checked="customBuildConfig.themes.indexOf('md') >= 0"
               @change="toggleArrayValue(customBuildConfig.themes, 'md')"
               checkbox
+              checkbox-icon="start"
               title="Include MD theme"
             />
             <f7-list-item
               :checked="customBuildConfig.themes.indexOf('aurora') >= 0"
               @change="toggleArrayValue(customBuildConfig.themes, 'aurora')"
               checkbox
+              checkbox-icon="start"
               title="Include Aurora theme"
             />
             <f7-list-item
               :checked="customBuildConfig.darkTheme"
               @change="customBuildConfig.darkTheme = $event.target.checked"
               checkbox
+              checkbox-icon="start"
               title="Include Dark theme"
             />
             <f7-list-item
               :checked="customBuildConfig.lightTheme"
               @change="customBuildConfig.lightTheme = $event.target.checked"
               checkbox
+              checkbox-icon="start"
               title="Include Light theme"
             />
             <f7-list-item
               :checked="customBuildConfig.rtl"
               @change="customBuildConfig.rtl = !customBuildConfig.rtl"
               checkbox
+              checkbox-icon="start"
               title="RTL Layout"
             />
           </f7-list>
