@@ -189,12 +189,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/app.css',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: resolvePath('src/static'),
-        to: resolvePath('../www/static'),
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: resolvePath('src/static'),
+          to: resolvePath('../www/static'),
+        },
+      ]
+    }),
     ...(env === 'development' ? [
       new LiveReloadPlugin({
         appendScriptTag: true,

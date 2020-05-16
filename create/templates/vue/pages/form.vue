@@ -115,18 +115,21 @@
     <f7-list>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         name="my-checkbox"
         value="Books"
         title="Books"
       ></f7-list-item>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         name="my-checkbox"
         value="Movies"
         title="Movies"
       ></f7-list-item>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         name="my-checkbox"
         value="Food"
         title="Food"

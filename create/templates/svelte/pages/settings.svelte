@@ -118,18 +118,21 @@
   <List>
     <ListItem
       checkbox
+      checkboxIcon="start"
       name="my-checkbox"
       value="Books"
       title="Books"
     ></ListItem>
     <ListItem
       checkbox
+      checkboxIcon="start"
       name="my-checkbox"
       value="Movies"
       title="Movies"
     ></ListItem>
     <ListItem
       checkbox
+      checkboxIcon="start"
       name="my-checkbox"
       value="Food"
       title="Food"

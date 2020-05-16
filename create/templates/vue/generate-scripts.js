@@ -20,7 +20,7 @@ module.exports = (options) => {
     import Framework7Cn from '${customBuild ? './framework7-cn-custom.js' : 'framework7-cn/framework7-lite.esm.bundle.js'}';
 
     // Import Framework-CN-Vue Plugin
-    import Framework7CnVue from 'framework7-cn-vue/framework7-cn-vue.esm.bundle.js';
+    import Framework7CnVue from 'framework7-cn-vue/framework7-vue.esm.bundle.js';
 
     ${templateIf(bundler === 'webpack', () => `
     // Import Framework7Cn Styles
